@@ -7,12 +7,24 @@
 #   Uncomment the ones you want to try and experiment with.
 #
 #   These are from the scripting documentation: https://github.com/github/hubot/blob/master/docs/scripting.md
+gpio = require "pi-gpio"
+
+pinState = (pin, state) ->
+  gpio.open pin, "output", (err) ->
+    gpio.write pin, state, ->
+      gpio.close pin
 
 module.exports = (robot) ->
 
-  # robot.hear /badger/i, (res) ->
-  #   res.send "Badgers? BADGERS? WE DON'T NEED NO STINKIN BADGERS"
-  #
+  robot.hear "on", (res) ->
+    res.send "Spinning!"
+    pinState 12, 1
+
+  robot.hear "off", (res) ->
+    res.send "Giroflex off"
+    pinState 12, 0
+
+
   # robot.respond /open the (.*) doors/i, (res) ->
   #   doorType = res.match[1]
   #   if doorType is "pod bay"
