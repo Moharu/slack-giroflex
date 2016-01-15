@@ -16,11 +16,11 @@ pinState = (pin, state) ->
 
 module.exports = (robot) ->
 
-  robot.hear "on", (res) ->
+  robot.respond /on/i, (res) ->
     res.send "Spinning!"
     pinState 12, 1
 
-  robot.hear "off", (res) ->
+  robot.respond /off/i, (res) ->
     res.send "Giroflex off"
     pinState 12, 0
 
