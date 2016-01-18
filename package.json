@@ -24,6 +24,6 @@
     "node": "0.10.x"
   },
   "scripts": {
-    "start": "HUBOT_SLACK_TOKEN=xoxb-17519202256-fBSO2c7i7mE2XXPePEVIqQmt bin/hubot -a slack"
+    "start": "HUBOT_SLACK_TOKEN=xoxb-17519202256-RTTsgT33RAl6WPl4O1EfZy5Q bin/hubot -a slack"
   }
 }
