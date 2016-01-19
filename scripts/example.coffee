@@ -24,10 +24,6 @@ module.exports = (robot) ->
     res.send "Giroflex off"
     pinState 12, 0
 
-  robot.respond "manda nudes", (res)->
-    res.send "http://www.lojadomecanico.com.br/imagens/36/717/73338/Luz-de-Emergencia-Giroflex-Amarela-12V-western-ln-0-1.JPG"
-
-
   # robot.respond /open the (.*) doors/i, (res) ->
   #   doorType = res.match[1]
   #   if doorType is "pod bay"
